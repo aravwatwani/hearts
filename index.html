@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Helping Everyone VIA Arts</title>
+  <meta name="description" content="We support and inspire others in our community through our artistic expressions." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap 4-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!--icons-->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<style>
+
+  .top, .info-text {
+
+  text-align: center;
+  color: #5A4D9B;
+
+  }
+
+  .projects-background {
+
+  background-color: #f8f9fa;
+
+  }
+
+  .info-text {
+
+  color: #d81b60;
+  padding-top: 2em;
+
+  }
+
+  .project-1 {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, 500%);
+  color: white;
+
+  }
+
+  .projects-background {
+
+  background-color: #F7EBEB;
+
+  }
+
+  .dropbtn {
+
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+
+  }
+
+  .dropdown {
+
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: none;
+
+  }
+
+  .dropdown-content {
+
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+  }
+
+  .dropdown-content a {
+
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  /* #main {
+    background-color:#A8AEBF;
+  } */
+
+  .alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    z-index: 1;
+    position: relative;
+    font-size: 20px;
+  }
+
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .closebtn:hover {
+    color: black;
+  }
+  #banner {
+    color: lightblue;
+    text-decoration: underline;
+  }
+
+</style>
+
+<body>
+  <!--header-->
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="ion-grid icon-sm"></span>
+    </button>
+    <a class="navbar-brand hero-heading" href="#">HEARTS</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#main">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#features">WHAT WE DO</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#team">TEAM</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll dropdown" href="#contact">CONTACT</a>
+        </li>
+        <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="events.html">EVENTS
+            <div class="dropdown-content">
+              <a href="events.html">Home</a>
+              <a href="library.html">Workshops</a>
+              <a href="conference.html">Conference</a>
+            </div>
+          </button>
+        </li>
+        <!-- <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="projects.html">PROJECTS</a>
+            <div class="dropdown-content">
+              <a href="ashram.html">The Sawan Dharmath Ashram Project</a>
+            </div>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!--main section-->
+  <section class="bg-texture hero" id="main">
+    <div class="container">
+      <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>HEARTS</strong> is hosting a virtual conference for anyone interested! Click <a id="banner" href="https://www.heartsunity.org/conference.html" target="_blank">here</a> to learn more!
+      </div>
+      <div class="row d-md-flex brand">
+        <div class="col-md-6 hidden-sm-down wow fadeIn">
+          <img class="img-logo mx-auto d-block" src="img/logo.png" />
+        </div>
+        <div class="col-md-6 col-sm-12 text-white wow fadeIn">
+          <h2 class="pt-4">HEARTS - Helping Everyone via Arts <b class="text-primary-light"> </b></h2>
+          <p class="mt-5">
+            We support and inspire others in our community through our artistic expressions.
+          </p>
+          <p class="mt-5">
+            <a href="#about" class="btn btn-primary mr-2 mb-2 page-scroll">Learn More</a>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--features-->
+  <section class="bg-light" id="features">
+    <div class="container">
+      <div class="row mb-3">
+        <div class="col-md-6 col-sm-8 mx-auto text-center wow fadeIn">
+          <h2 class="text-primary">We Inspire. We Create. We Collaborate.</h2>
+
+        </div>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col-md-4 wow fadeIn">
+          <div class="card">
+            <div class="card-body">
+              <div class="icon-box">
+                <em class="ion-ios-flame icon-md"></em>
+              </div>
+              <h6>Inspire</h6>
+              <p>
+                HEARTS was based on our inspiration and our wanting to inspire others. We were inspired to help others when we noticed real world problems around us and wanted to help others through what we know; one such example includes our use of
+                our background in arts. This is the foundation of our nonprofit organization. We feed our own ambition into our passion to inspire others—through our dance. By partnering with local charities, we have choreographed and presented our
+                dance skills on stage.
+
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeIn">
+          <div class="card">
+            <div class="card-body">
+              <div class="icon-box">
+                <em class="ion-android-bulb icon-md"></em>
+              </div>
+              <h6>Creativity</h6>
+              <p>
+                Creativity is crucial to HEARTS' mission. We reach out to people in our community and motivate individuals to express themselves and help other people. Arts and creativity are crucial part of every person’s life. Humans have always
+                used art to communicate and express themselves, sometimes making tremendous discoveries about their inner self and humanity while doing so. We want people to experience the happiness and sense of peace that comes from art, and the
+                sense of serenity it leaves you with.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeIn">
+          <div class="card">
+            <div class="card-body">
+              <div class="icon-box">
+                <em class="ion-earth icon-md"></em>
+              </div>
+              <h6>Collaboration</h6>
+              <p>
+                Our core principles state that in order for everyone to be happy and express themselves through arts we all need to be unified and work together. We all must accept each other cherish the different contributions that each unique
+                person gives to our community. Art is something that everyone should have access to and that everyone should be able to do. In order for this to happen, we all have to work together, and make everyone feel like who they are is
+                enough, and that their art is valued and will make a difference.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white p-0" id="about">
+    <div class="container-fluid">
+      <div class="row d-md-flex mt-5">
+        <div style="background-color:#ede2da;" class="col-sm-6 p-0 wow fadeInLeft">
+          <img class="img-fluid" src="img/product1.jpg" alt="Gallery">
+        </div>
+        <div class="col-sm-6 pl-5 pr-5 pt-5 pb-4 wow fadeInRight">
+          <h3><a href="#">About Us</a></h3>
+          <p class="lead pt-4">HEARTS was founded to connect and support individuals in society to raise awareness for real world problems. Seven young individuals came together with a drive to support others and use their skills to reach out into
+            their communities. We have supported various charities and drawn attention to issues in our society and we plan to create a legacy and set example for all who follow. We are determined to support what we believe in forever, and help
+            those who need help. </p>
+
+          <p class="lead pt-4">Our logo represents the symbol of happiness: the most important aspect of our non-profit organization. This is the symbol of a bluebird, as the harbinger of happiness is found in many cultures and may date back
+            thousands of years. It represents our perseverance and inspiration as part of this non-profit. Our use of the colors lavender and coral represent creativity, uniqueness, and harmony. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--team-->
+  <section class="bg-white" id="team">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-8 mx-auto text-center">
+          <h2 class="text-primary">Our Founding Members</h2>
+          <p class="lead pt-3">
+            Meet our awesome team.
+          </p>
+        </div>
+      </div>
+      <div class="row d-md-flex mt-5 text-center">
+        <div class="team mt-2 wow fadeInLeft">
+          <div style="float:left; display:inline;">
+            <a href="https://www.linkedin.com/in/deepalijain1/" target="_blank"><img src="img/team-1.jpg" alt="Male" class="img-team img-fluid rounded-circle" /></a>
+          </div>
+          <p style="float:right; display:inline; width: 80%;">Deepali Jain is currently a student at the University of California, Berkeley studying Electrical Engineering and Computer Science. She loves learning and developing herself holistically
+            and doing work that impacts her company. Currently, she’s working on a mobile app to improve engagement in classrooms and applying machine learning technology to interpret and analyze large data files. When she’s not busy, you can find
+            her dancing, painting, or biking! With her involvement in Asha for Education, Berkeley, and a co-founder of HEARTS, she hopes to help continue growing and impacting the community around her.
+          </p>
+        </div>
+        <div class="team mt-2 wow fadeInRight">
+          <div style="float:right; display:inline;">
+            <a href="https://www.linkedin.com/in/divya-jain-57a303156/" target="_blank"><img src="img/team-2.jpg" alt="Male" class="img-team img-fluid rounded-circle" /></a>
+          </div>
+          <p style="float:left; display:inline; width: 85%;">Divya Jain is a current student at Westview High School and aspires to be a Data Science and Business Major in a 4-year university. By co-founding a STEAM Teen Cafe for teenagers,
+            co-hosting a STEAM Week for middle schoolers, and serving as the head of outreach in her Robotics club, Divya actively spreads STEAM to the community. She has also served as the head of the business department in Robotics and is working
+            on planning a TecHacks hackathon in hopes of promoting the idea of merging business and technology in the industry. Divya’s experiences in attending dance competitions and taking part in the South Asian Culture Show at her school led to
+            her co-founding HEARTS.
+
+          </p>
+        </div>
+        <div class="team mt-2 wow fadeInLeft">
+          <div style="float:left; display:inline;">
+            <a href="https://www.linkedin.com/in/rhea-chhabra-309b251a7/" target="_blank"><img src="img/team-3.jpg" alt="Male" class="img-team img-fluid rounded-circle" /></a>
+          </div>
+          <p style="float:right; display:inline; width: 80%;">Rhea Chhabra is currently a student at Scripps Ranch High School who is a competitive dancer in Bollywood and classical Indian dance, known as Kathak, for the past twelve years. She also
+            loves playing badminton and is on her high school’s team as well. Recently, Rhea is expanding her interests into entrepreneurship by serving as CEO in launching her own VR based company and has won business competitions in the TYE
+            program. Rhea also loves helping the community and has been a member of House of Pacific Relations for the past five years and will soon be Treasurer for the upcoming year. In this organization, she is able to help her society with
+            volunteer work as an ambassador for the House of India, which led her to co-founding HEARTS.</p>
+        </div>
+        <div class="team mt-2 wow fadeInRight">
+          <div style="float:right; display:inline;">
+            <img src="img/team-4.jpg" alt="Male" class="img-team img-fluid rounded-circle" />
+          </div>
+          <p style="float:left; display:inline; width: 85%;">Sofie Muneer, co-founder of this organization and a sophomore at Canyon Crest Academy, is a catalyst for positive change. She is kind, curious and mindful student of life, who believes that every human being has a purpose on this pale blue dot of a planet in Carl Sagan's universe. Her love for science, math and performing arts has resulted in many statewide and regional awards in Science Olympiad and Sigma math competitions. As a robotics enthusiast she has helped evaluate autonomous navigation algorithms. She is a voracious reader of political, scientific and philosophical/bioethical journals and an avid debater. In keeping with her core principle of helping the underserved, she is working with an overseas NGO to help develop/benchmark distance learning methods in STEM education for middle schoolers. She is passionate about the bioethics of medicine and its implications in the economics of healthcare. In her free time, she loves to read her “Miss Marvel” comics, sketch Star Wars characters and watch her favorite speedster—"The Flash”.</p>
+        </div>
+        <div class="team mt-2 wow fadeInLeft">
+          <div style="float:left; display:inline;">
+            <a href="https://www.linkedin.com/in/harshada-sapre-50765b1b0/" target="_blank"><img src="img/team-5.jpg" alt="Male" class="img-team img-fluid rounded-circle" /></a>
+          </div>
+          <p style="float:right; display:inline; width: 80%;">Harshada Sapre is an International Business student at the University of California San Diego. In her free time, she enjoys reading and you’ll often find her with a new book in hand.
+            After graduating, she aspires to go to law school and work in a multinational organization. Her other skills include learning new languages, painting and dancing. She loves to travel and explore new places and her philosophy is that each
+            and every person has a unique story to tell.
+          </p>
+        </div>
+        <div class="team mt-2 wow fadeInRight">
+          <div style="float:right; display:inline;">
+            <img src="img/team-6.jpg" alt="Male" class="img-team img-fluid rounded-circle" />
+          </div>
+          <p style="float:left; display:inline; width: 85%;"> Kashika Gupta is currently attending high school. Dancing has always been her passion because it is a way for her to unfold and express herself. She has been dancing since she was three
+            years old and is also on the dance team at school. She loves music and has been in choir for three years. Her favorite sport is badminton and is on the school team. Kashika has maintained a high GPA and has earned an award for it as
+            well. Her favorite subject is science as she aspires to be a doctor. She also enjoys helping her community in various ways. She is also an active member of the SEWA International, an organization that works to help people in need and
+            educate the next generation. Kashika also helps out and participates in an annual show raising money for the Cystic Fibrosis Foundation. She believes that through helping others you can find your own happiness.</p>
+        </div>
+        <div class="team mt-2 wow fadeInLeft">
+          <div style="float:left; display:inline;">
+            <a href="https://www.linkedin.com/in/aravwatwani/" target="_blank"><img src="img/team-7.jpg" alt="Male" class="img-team img-fluid rounded-circle" /></a>
+          </div>
+          <p style="float:right; display:inline; width: 80%;">Arav Watwani is currently a Computer Science student at the University of California, Berkeley. Aside from being a full-time student, Watwani enjoys applying himself creatively in myriad
+            fields and is passionate about technology, design, and education. He hopes to forge a career in either software or product design, and enjoys disseminating knowledge to the youth and his peers to empower them to solve some of the world’s
+            biggest problems. When he’s not busy, you might find Watwani at a local coffee shop, either reading, writing, or programming. :)</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--contact-->
+  <section class="bg-texture-collage p-0" id="contact">
+    <div class="container">
+      <div class="row d-md-flex text-white text-center wow fadeIn">
+        <div class="col-sm-4 p-5">
+          <p><em class="ion-ios-email-outline icon-md"></em></p>
+          <p class="lead">heartsunity.sd@gmail.com</p>
+        </div>
+        <div class="col-sm-4 p-5">
+          <p><em class="ion-ios-location-outline icon-md"></em></p>
+          <p class="lead">San Diego, California</p>
+        </div>
+        <div class="col-sm-4 p-5">
+          <p><em class="ion-social-instagram-outline icon-md"></em></p>
+          <p class="lead"><a style="color: white; text-decoration: none;" href="https://www.instagram.com/hearts_unity/" target="_blank">@hearts_unity</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <section class="bg-footer" id="connect">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
+          <h1>HEARTS</h1>
+          <p class="mt-4">
+            <a href="https://www.facebook.com/hearts.unity/" target="_blank"><em class="ion-social-facebook text-facebook-alt icon-sm mr-3"></em></a>
+            <a href="https://www.instagram.com/hearts_unity/" target="_blank"><em class="ion-social-instagram text-google-alt icon-sm mr-3"></em></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

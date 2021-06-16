@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Helping Everyone VIA Arts</title>
+  <meta name="description" content="We support and inspire others in our community through our artistic expressions." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Bootstrap 4-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!--icons-->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <style>
+    * {box-sizing: border-box}
+    /* body {font-family: Verdana, sans-serif; margin:0} */
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* next & previous buttons */
+      .prev1, .next1 {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: red;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+      }
+
+      /* Position the "next button" to the right */
+      .next1 {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev1:hover, .next1:hover {
+        background-color: rgba(255,255,255, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px 25px;
+        background-color: #D49EFF;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+
+        background-color: #ff4081;
+
+      }
+
+      /* Fading animation */
+      .fade1 {
+        -webkit-animation-name: fade1;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade1;
+        animation-duration: 1.5s;
+
+      }
+
+      @-webkit-keyframes fade1 {
+        from {opacity: .4}
+        to {opacity: 1}
+
+      }
+
+      @keyframes fade1 {
+        from {opacity: .4}
+        to {opacity: 1}
+
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev1, .next1,.text {font-size: 11px}
+
+      }
+
+      .empowermentlink {
+
+      color: lightblue;
+      text-decoration: underline;
+
+      }
+
+      .text {
+
+      background-color: #D49EFF;
+
+      }
+
+      .background-events {
+
+      background-color: #F7EBEB;
+
+      }
+
+      .top, .info-text {
+
+      text-align: center;
+      color: #5A4D9B;
+
+      }
+
+      .projects-background {
+
+      background-color: #f8f9fa;
+
+      }
+
+      .info-text {
+
+      color: #d81b60;
+      padding-top: 2em;
+
+      }
+
+      .project-1 {
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-55%, 500%);
+      color: white;
+
+      }
+
+      .projects-background {
+
+      background-color: #F7EBEB;
+
+      }
+
+      .dropbtn {
+
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+
+      }
+
+      .dropdown {
+
+      position: relative;
+      display: inline-block;
+      border: none;
+      background: none;
+
+      }
+
+      .dropdown-content {
+
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+
+      }
+
+      .dropdown-content a {
+
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+      }
+
+      .dropdown-content a:hover {background-color: #ddd;}
+
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+      </style>
+
+</head>
+
+
+<body>
+  <!--header-->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="ion-grid icon-sm"></span>
+    </button>
+    <a class="navbar-brand hero-heading" href="#">HEARTS</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="index.html#main">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="index.html#features">WHAT WE DO</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="index.html#about">ABOUT</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="index.html#team">TEAM</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll dropdown" href="index.html#contact">CONTACT</a>
+        </li>
+        <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="events.html">EVENTS
+            <div class="dropdown-content">
+              <a href="events.html">Home</a>
+              <a href="library.html">Workshops</a>
+              <a href="conference.html">Conference</a>
+            </div>
+          </button>
+        </li>
+        <!-- <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="projects.html">PROJECTS</a>
+            <div class="dropdown-content">
+              <a href="ashram.html">The Sawan Dharmath Ashram Project</a>
+            </div>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!--events header thing-->
+
+  <section class="bg-texture hero" id="main">
+    <div class="container">
+      <div class="row d-md-flex brand">
+        <div class="col-md-6 hidden-sm-down wow fadeIn">
+          <img class="img-logo mx-auto d-block" src="img/logo.png" />
+        </div>
+        <div class="col-md-6 col-sm-12 text-white wow fadeIn">
+          <h2 class="pt-4">EVENTS <b class="text-primary-light"> </b></h2>
+          <p class="mt-5">
+            Some events our organization participates in around the San Diego area.
+          </p>
+          <p class="mt-5">
+            <a href="#features" class="btn btn-primary mr-2 mb-2 page-scroll">Discover</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--events information-->
+  <section class="background-events p-0" id="features">
+    <div class="col-sm-6 pl-5 pr-5 pt-5 pb-4 wow"></div>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade1">
+        <img src="img/image3.JPG" style="width:100%">
+        <div class="text">HEARTS held a food drive and it was a huge success! We received 606 pounds of food and over $500 in donations!</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/image2.JPG" style="width:100%">
+        <div class="text">Our HEARTS members packed over 200 boxes of medical health care items for women in service.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/image1.JPG" style="width:100%">
+        <div class="text">Our HEARTS members supported the friends and families of the fallen at the Texas Shooting by making cards full of supportive and compassionate words.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/activcare.jpeg" style="width:100%">
+        <div class="text">Our HEARTS members performed a dance at a senior home for the elderly.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/IMG_1564.JPG" style="width:100%">
+        <div class="text">Our HEARTS members celebrate Mira Mesa Library's 25th anniversary with a dance performance.</div>
+      </div>
+
+      <!--
+      <div class="mySlides fade1">
+        <img src="img/diwali.jpg" style="width:100%">
+        <div class="text">HEARTS wishes everyone a Happy Diwali.</div>
+      </div> -->
+
+      <div class="mySlides fade1">
+        <img src="img/letters.jpg" style="width:100%">
+        <div class="text">HEARTS wrote letters to frontline workers for the COVID-19 pandemic.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/covidmasks.jpg" style="width:100%">
+        <div class="text">HEARTS donated masks to public health professionals in San Diego County.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/diwali2.JPG" style="width:100%">
+        <div class="text">HEARTS hosted a Diwali event at the Mira Mesa Public Library.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/diya.JPG" style="width:100%">
+        <div class="text">The children of the workshop made some Diwali decorations as an arts and crafts project.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/display.jpg" style="width:100%">
+        <div class="text">HEARTS put on a display at the local library in honor of Diwali.</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <img src="img/poway.jpg" style="width:100%">
+        <div class="text">HEARTS performed a dance at the Poway library.</div>
+      </div>
+
+      <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </section>
+
+
+  <!--contact-->
+  <section class="bg-texture-collage p-0" id="contact">
+    <div class="container">
+      <div class="row d-md-flex text-white text-center wow fadeIn">
+        <div class="col-sm-4 p-5">
+          <p><em class="ion-ios-email-outline icon-md"></em></p>
+          <p class="lead">heartsunity.sd@gmail.com</p>
+        </div>
+        <div class="col-sm-4 p-5">
+          <p><em class="ion-ios-location-outline icon-md"></em></p>
+          <p class="lead">San Diego, California</p>
+        </div>
+        <div class="col-sm-4 p-5">
+          <p><em class="ion-social-instagram-outline icon-md"></em></p>
+          <p class="lead"><a style="color: white; text-decoration: none;" href="https://www.instagram.com/hearts_unity/" target="_blank">@hearts_unity</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <section class="bg-footer" id="connect">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
+          <h1>HEARTS</h1>
+          <p class="mt-4">
+            <a href="https://www.facebook.com/hearts.unity/" target="_blank"><em class="ion-social-facebook text-facebook-alt icon-sm mr-3"></em></a>
+            <a href="https://www.instagram.com/hearts_unity/" target="_blank"><em class="ion-social-instagram text-google-alt icon-sm mr-3"></em></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    $('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+      }, 1500, 'easeInOutExpo');
+      event.preventDefault();
+    });
+  </script>
+</body>
+
+</html>

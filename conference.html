@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>HEARTS Virtual Conference</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Poppins", sans-serif
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  button {
+    background-color: #E99995;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    width: 110%;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    font-size: 14px;
+  }
+
+  .plus {
+    text-align: right;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    /* Should be removed. Only for demonstration */
+  }
+
+  .column_speaker {
+    float: left;
+    width: 100%;
+    /* Should be removed. Only for demonstration */
+  }
+
+  .alignleft {
+    float: left;
+  }
+
+  .alignright {
+    float: right;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .indent {
+    margin-left: 3%;
+  }
+
+  #more0,
+  #more2,
+  #more3,
+  #more4,
+  #more5,
+  #more6,
+  #more7,
+  #more8,
+  #more9,
+  #more10 {
+    display: none;
+  }
+
+  .speaker_btn {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .speaker_image {
+    width: 70%;
+    margin-left: 15%;
+    text-align: center;
+    filter: saturate(3);
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="background-color: #E99995 ;z-index:3;width:20%;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>HEARTS</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Schedule</a>
+      <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Speakers</a>
+      <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prizes</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header style="background-color: #E99995;" class="w3-container w3-top w3-hide-large w3-xlarge w3-padding">
+    <a href="javascript:void(0)" style="background-color: #E99995;" class="w3-button w3-margin-right" onclick="w3_open()">☰</a>
+    <span>HEARTS</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:21%;margin-right:40px">
+
+    <!-- about -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h1 class="w3-jumbo" style="color:#3E7280" ;><b>HEARTS Virtual Conference</b></h1>
+      <hr style="width:50px;border:5px solid #E99995 " class="w3-round">
+      <br>
+      <h1 class="w3-xxxlarge w3-text-dark-gray"><b>About.</b></h1>
+      <hr style="width:50px;border:5px solid #E99995 " class="w3-round">
+      <p>Helping Everyone Via Arts, HEARTS, a 501(c)(3) nonprofit, was founded to motivate individuals in society to raise awareness for real-world problems. With a drive to support others through the utilization of our artful skills, we have
+        subsidized various charities and inspirited people to express themselves by spreading our love for the arts. We encompass many interests from coding to drama and dance in our workshops.
+        <br><br>
+        With this conference, our goal is to show individuals that a passion for art does not hinder a practical future. We are focusing on innovators in the professional field who use art in their daily lives and jobs. Our speakers discuss
+        scientific exploration such as robotics and the importance of arts in early adolescence. They show us that art can enrich your life and career. We invite you to attend this two-day conference and expand your horizons.
+      </p>
+    </div>
+
+    <!-- schedule -->
+    <div class="w3-container row" id="services" style="margin-top:75px;">
+      <h1 class="w3-xxxlarge w3-text-dark-gray"><b>Schedule.</b></h1>
+      <div class="column">
+
+        <p>Our event will run from October 10th to October 11th. </p>
+        <i> All times listed below are in Pacific Standard Time (PST). </i>
+        <h4><u>Events</u></h4>
+        <h5>October 10th</h5>
+        <div>
+          <button onclick="hide('hide1', 'events/paula.png')">
+            <div class="alignleft">Defining Process Art, Supporting Diversity in Early Education  [11:00 AM-12:00 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide1" style="display:none;font-size:12px;">The focal point of my presentation is about advocating for art and diversity in an early education setting. Children are special and deserve the appropriate care and
+            attention that would enable them to reach their full potential. Children naturally need art to learn and to explore. Art is a medium for all aspects of learning and it is a natural need. The arts enable the achievement of unlimited aims
+            and create ideas, and offer a wide array of entertainments. Furthermore, The arts shape personalities, develop positive attitudes, and distinguishing characteristics. Art education also helps in improving reasoning, intuition,
+            imagination, and enhance intellectual skills.</p>
+        </div>
+
+        <div>
+          <button onclick="hide('hide6', 'events/deepali.PNG')">
+            <div class="alignleft">Copycat Art [12:05 PM-1:05 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide6" style="display:none;font-size:12px;">The talk seeks to explore answers to the following questions? What is Software Development? Is Software development an Art or Science? Can anybody learn to Paint, or for
+            that matter can anybody learn to Code?</p>
+        </div>
+
+        <div>
+          <button onclick="hide('hide3', 'events/kiersay.PNG')">
+            <div class="alignleft">The Intersection of Design/Business/Entrepreneurship [1:30-2:30 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide3" style="display:none;font-size:12px;">Have you ever wondered how you can integrate your passion for art and design into the world of business and entrepreneurship? Look no further. Kiersay will walk through her
+            journey of how she took an unconventional path from her finance BComm degree to social-tech entrepreneurship at FLIK. In her day-to-day life as the Marketing Manager at FLIK, a freelancer, and an Instagram micro-influencer, Kiersay has
+            formulated a career for herself that incorporates her two passions: creativity and business. As someone who always struggled with finding a way to align her passions with a career trajectory, Kiersay will dive into how to discover
+            careers at the intersection of creativity and business, how to discover what you really want to do, and opportunities for womxn with FLIK.</p>
+        </div>
+
+        <div>
+          <button onclick="hide('hide4', 'events/kiana.PNG')">
+            <div class="alignleft">Native American Art, Activism, & (Mis)Appropriation [2:35-3:35 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide4" style="display:none;font-size:12px;">Art is embedded in Native American culture through all aspects of our lives. Through the creation and continuation of song, dance, beadwork, weaving and many other forms of
+            art, our traditional cultures continue to thrive in a world that attempted to not only strip away all parts of our culture from our people, but to erase us completely. Through this presentation, you will learn about various Native
+            American cultural arts, our use of art through activism, and the harm caused by the (mis)appropriation of our arts and culture.</p>
+        </div>
+
+        <!-- <div>
+          <button onclick="hide('hide5', 'events/bethann.PNG')">
+            <div class="alignleft">Drawn to Science Communication [3:40-4:40 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide5" style="display:none;font-size:12px;">Art and science have long been intertwined. As these disciplines have become increasingly specialized, however, popular and professional conceptions of the relationship
+            between art and science have become siloed, separated. In this talk, we will explore how technology and cultural influences have impacted the way that art and science interact and the influence this has on how scientists share their
+            science.</p>
+        </div> -->
+
+        <h5>October 11th</h5>
+        <div>
+          <button onclick="hide('hide2', 'events/nandini.PNG')">
+            <div class="alignleft">Platform that Infuses Gracious Professionalism [11:00 AM-12 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide2" style="display:none;font-size:12px;">The world of Robotics is a fascinating one, platform of FIRST is creative and promotes "out of the box" thinkers. We will promote and explain the concept behind the FIRST
+            League and demonstrate some innovative solutions.</p>
+
+        </div>
+
+        <div>
+          <button onclick="hide('hide7', 'events/summer.PNG')">
+            <div class="alignleft">Artistic Aerospace [12:05-1:05 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide7" style="display:none;font-size:12px;">Aerospace engineering might be a highly technical discipline, but that doesn't mean it lacks art. Summer Hoss will talk about the importance of art in an engineering
+            discipline, as well as how she incorporates creativity into her studies and personal life.</p>
+        </div>
+
+        <!-- <div>
+          <button onclick="hide('hide8', 'events/swetha.PNG')">
+            <div class="alignleft">Stories from a Pirouetting Programmer [1:30-2:30 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide8" style="display:none;font-size:12px;">In this talk, Swetha will discuss her journey through the performing arts and technology industries and the insights she has learned along the way.</p>
+        </div> -->
+
+        <div>
+          <button onclick="hide('hide9', 'events/michelle.PNG')">
+            <div class="alignleft">How I Turned a Media Blog into a Tech Company [2:35-3:35 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide9" style="display:none;font-size:12px;">Michelle will be discussing how she turned from a medical science student to a social tech entrepreneur. Starting FLIK first as a media company through her skills in videography and writing, then leading its transition into the tech platform & community hub it is today, accelerating entrepreneurial womxn from 45+ countries across the world. </p>
+        </div>
+
+        <div>
+          <button onclick="hide('hide10', 'events/saura.PNG')">
+            <div class="alignleft">Breaking Stereotypes with a Robotic Dress [3:40-4:40 PM]</div>
+            <div class="alignright"><b>+</b></div>
+          </button>
+          <div style="clear: both;"></div>
+          <p class="indent" id="hide10" style="display:none;font-size:12px;">Breaking stereotypes of what engineering can be applied to is a way to broaden the participation into engineering fields. Art allows agency over the manifestation of their
+            project which can result in people feeling “allowed” to play in this engineering space that has traditionally been dominated by a narrow identity of people. The robotic dress is an example of breaking these stereotypes.</p>
+        </div>
+
+      </div>
+      <div class="column" style="margin-top:120px;">
+        <img id="event_image" class="alignright" src="events/main.PNG" style="width:400px;" alt="John">
+      </div>
+    </div>
+
+
+    <!-- Designers -->
+    <div class="w3-container" id="designers" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-dark-gray"><b>Speakers.</b></h1>
+      <hr style="width:50px;border:5px solid #E99995" class="w3-round">
+      <p>Here's a little bit about our speakers attending this conference! </p>
+    </div>
+
+    <!-- The Team -->
+    <div class="w3-row-padding w3-grayscale">
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="column_speaker">
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/1.jpg" alt="Paula" class="speaker_image">
+              <h3 style="font-size:23px;">Palaton “Paula” El Haoubi</h3>
+              <p class="w3-opacity">Teacher, Child Development, SDMC</p>
+              <p>Paula El Haoubi’s family fled the Soviet-Afghan war in 1982 when she was two years old. The harsh and dangerous journey lasted too long, however <span id="dots0">. . .</span><span id="more0">it opened the door to a new world that
+                  was full of promises. Since her family had eight brothers and sisters, her parents had enormous responsibilities with a low socioeconomic status. However, they were destined to thrive to a better position through education. El
+                  Haoubi became the first generation in her family graduating from high school and university. She earned a Masters in Science in Family and Human Development, BA in Social Science. She also obtained four Associate Degrees as
+                  follows: Sociology, Computer Information Systems, Transfer Studies, and Child Development. Additionally, El Haoubi has obtained a Site Supervisor Child Development Permit in the state of California and holding Designated Subjects
+                  Credential: Career Technical Education from the Commission of Teachers in California. These credentials and degrees allow her to teach different subjects for K-12 and adults in vocational and college-level settings.</span></p>
+              <button onclick="readMoreAndLess('more0', 'myBtn0', 'dots0')" class="speaker_btn" id="myBtn0">Read more</button>
+            </div>
+          </div>
+
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/2.jpg" alt="Paula" class="speaker_image">
+              <h3>Nandini Srinivasan</h3>
+              <p class="w3-opacity">Vice President, Quality Engineering, PLEX Systems</p>
+              <p>Nandini is an accomplished Test Engineering executive, with years of leading Engineering teams across geographies, prioritizing Customer<span id="dots2">. . .</span><span id="more2">adoption and then on Customer Success. She is a
+                  proud feminist, who keeps Women in Tech, Women in STEM and Women empowerment on top of her mind, with every innovative activity . Nandini is also a successful FIRST Robotics coach and avid animal lover.</span></p>
+              <button onclick="readMoreAndLess('more2', 'myBtn2', 'dots2')" class="speaker_btn" id="myBtn2">Read more</button>
+            </div>
+          </div>
+
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/3.jpg" alt="Paula" class="speaker_image">
+              <h3>Kiersay Murray</h3>
+              <p class="w3-opacity">Marketing Manager at FLIK</p>
+              <p>Kiersay Murray is a Canadian-born creative, entrepreneur, and strong advocate for empowering women in business. Prior to launching her career at the intersection <span id="dots3">. . .</span><span id="more3">of design, business, and
+                  entrepreneurship, she was a BComm student at the University of Calgary seeking a way to merge her entrepreneurial spirit, passion for business strategy, finance, marketing, and design with something purposeful that made an impact.
+                  Now, as the Marketing Manager at FLIK (the first female-identifying apprenticeship portal), a freelance designer, social media strategist, and an Instagram micro-influencer, Murray is carving her own dream career and hopes to
+                  inspire others to fearlessly discover their own!
+                </span>
+                <button onclick="readMoreAndLess('more3', 'myBtn3', 'dots3')" class="speaker_btn" id="myBtn3">Read more</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="column_speaker">
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/4.jpg" alt="Paula" class="speaker_image">
+              <h3 style="font-size:23px;">Kiana Maillet</h3>
+              <p class="w3-opacity">Professor, Child Development, SDMC</p>
+              <p>Kiana Maillet is a member of the Lone Pine Paiute-Shoshone Tribe, a Licensed Clinical Social Worker, and an Adjunct Professor in Child Development <span id="dots4">. . .</span><span id="more4">at Miramar and City Colleges. Her
+                  educational background includes degrees in Liberal Studies, Child Development, Psychology, Social Work, and Public Administration. She is also currently in the Joint Doctoral Program in Educational Leadership through UCSD and CSUSM
+                  where she is researching Native American experiences with microaggressions and racism in early childhood education. She actively volunteers in both her Tribal community in Lone Pine, as well as here in Kumeyaay Land (otherwise
+                  known
+                  as San Diego), where she currently works and lives. Kiana is passionate about protecting and honoring her culture, the water and the land, as well as mentoring other Native people to further their education in both traditional and
+                  mainstream modalities in order to break cycles endured through a history of intergenerational trauma.</span>
+                <button onclick="readMoreAndLess('more4', 'myBtn4', 'dots4')" class="speaker_btn" id="myBtn4">Read more</button>
+            </div>
+          </div>
+
+          <!-- <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/5.jpg" alt="Paula" class="speaker_image">
+              <h3 style="font-size:22px">Bethann Garramon Merkle</h3>
+              <p class="w3-opacity">Director & Co-Founder, University of Wyoming Science Communication Initiative</p>
+              <p>Bethann Garramon Merkle is a scicomm research and award-winning science <span id="dots5">. . .</span><span id="more5">communicator. She has written over 300 articles, with bylines and illustrations in several books and publications
+                  including Nature, American Scientist, BioScience, and more.
+
+                  She is director and co-founder of the University of Wyoming Science Communication Initiative. Specializing in art-science integration and inclusive science communication, she has trained nearly 600 scientists. She is also a part of
+                  the faculty in the Department of Zoology and Physiology at the University of Wyoming.
+
+                  As a first-generation college student herself, she’s particularly committed to demystifying the hidden curriculum of academia and making science-allied careers more inclusive and equitable, especially as it relates to public
+                  engagement and science communication.
+                </span>
+                <button onclick="readMoreAndLess('more5', 'myBtn5', 'dots5')" class="speaker_btn" id="myBtn5">Read more</button>
+            </div>
+          </div> -->
+
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/6.jpg" alt="Paula" class="speaker_image">
+              <h3>Deepali Bhandari</h3>
+              <p class="w3-opacity">Principal Software Engineer</p>
+              <p>
+                Bhandari graduated from the University of Pennsylvania with a Master's Degree in Computer Science in 1998. She was
+                <span id="dots6">. . .</span><span id="more6">fortunate to be part of the Human Genome Sequencing project in 2000 and to have provided technical leadership for MassArray FDA approved diagnostic system in 2012. More recently, she
+                  works as a Principal Engineer in the Platform R and D team at Mitchell International that provides claims management solutions. Bhandari is also the founder of ideasAny LLC, a place to allow artists to upload their creations for
+                  sale or share. Her close friends and family would call her a juggler with multiple balls in the air. If it were not for that, she would be misequipped to dodge life's many curveballs.
+                </span>
+                <button onclick="readMoreAndLess('more6', 'myBtn6', 'dots6')" class="speaker_btn" id="myBtn6">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col m4 w3-margin-bottom">
+        <div class="column_speaker">
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/7.jpg" alt="Paula" class="speaker_image">
+              <h3>Summer Hoss</h3>
+              <p class="w3-opacity">Undergraduate Researcher, Student at MIT</p>
+              <p>Summer Hoss is a college sophomore studying Aerospace Engineering at MIT. She currently works on simulations of electric <span id="dots7">. . .</span><span id="more7">thrusters for small spacecraft as an undergraduate in the MIT
+                  Space
+                  Propulsion Lab. Hoss wants to work as an engineer in the space industry in the future.</span>
+                <button onclick="readMoreAndLess('more7', 'myBtn7', 'dots7')" class="speaker_btn" id="myBtn7">Read more</button>
+            </div>
+          </div>
+
+          <!-- <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/8.jpg" alt="Paula" class="speaker_image">
+              <h3>Swetha Prabakaran</h3>
+              <p class="w3-opacity">Professional Dancer & Choreographer, Computer Science Student at UC Berkeley</p>
+              <p>Swetha Prabakaran is a 4th year student at UC Berkeley double majoring in Computer Science <span id="dots8">. . .</span><span id="more8">and Dance & Performance Studies. After having danced for virtually her whole life, Swetha is
+                  passionate about bridging the perceived divide between the arts and STEM, including in her technical roles. Recently, Swetha choreographed and directed the viral hit, Microsoft: the Musical, while interning with the Microsoft
+                  Threat
+                  Intelligence Center, and most recently she worked at Facebook. When she’s not in the dance studio or the CS building, you’ll probably find Swetha teaching at the Sutardja Entrepreneurship Center in Berkeley, mentoring young women
+                  getting started in tech through her nonprofit Everybody Code Now!, or stress-baking copious amounts of pastries.
+                </span>
+                <button onclick="readMoreAndLess('more8', 'myBtn8', 'dots8')" class="speaker_btn" id="myBtn8">Read more</button>
+            </div>
+          </div> -->
+
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/9.jpg" alt="Paula" class="speaker_image">
+              <h3>Michelle Kwok</h3>
+              <p class="w3-opacity">Co-Founder and CEO of FLIK</p>
+              <p>
+                Kwok is a born and raised Vancouverite - medical science student turned social entrepreneur. She co-founded FLIK (weareflik.com), an
+                apprenticeship portal <span id="dots9">. . .</span><span id="more9">connecting female founders/leaders to ambitious female students to facilitate relationships that lift communities of women.
+                  Beginning her career in medical sciences and initially volunteering her time to advance neuroimaging and pediatric gastroenterology research, Kwok has always had a passion for impact.
+                  When selected to Next 36, Canada's premier program for young entrepreneurs, she discovered her niche at the intersection of technology and impact, when realizing the gender disparity in entrepreneurship. Kwok has had the honour of
+                  speaking at universities and spaces across North America sharing her thoughts on entrepreneurship, women empowerment, diversity and inclusion, and breaking down barriers. She now serves on the alumni advisory council of League of
+                  Innovators and as an alumni rep for Next 36 to accelerate more youth entrepreneurs.
+                </span>
+                <button onclick="readMoreAndLess('more9', 'myBtn9', 'dots9')" class="speaker_btn" id="myBtn9">Read more</button>
+            </div>
+          </div>
+
+          <div class="w3-light-grey margin_speaker">
+            <div class="w3-container">
+              <img src="conf_img/10.jpg" alt="Paula" class="speaker_image">
+              <h3>Saura Naderi</h3>
+              <p class="w3-opacity">K-14 Outreach Director at Halıcıoğlu Data Science Institute at UCSD</p>
+              <p>
+                Saura Naderi ‘07 earned her engineering degree from UC San Diego Jacobs School just as the recession hit. Not satisfied by the opportunities available to her, she <span id="dots10">. . .</span><span id="more10">connecting female
+                  founders/leaders to ambitious female students to facilitate relationships that lift communities of women.
+
+                  created her own. She volunteered, later becoming an employee, to create a program at UC San Diego where undergraduates and K-12 students could play and explore science and technology with art-themed engineering-based projects.
+
+                  After receiving the exemplary employee award at UC San Diego and the Athena Pinnacle award and invited to do a TEDx talk, she was recruited by Qualcomm to create a similar program named – Thinkabit Lab. Upon leaving Qualcomm,
+                  Thinkabit Lab engaged 14,000+ middle school students and has been replicated in many different environments from libraries and schools to universities and companies. Saura was also a contestant on SyFy’s Robot Combat League, was an
+                  “Adventure Person” on Nerdist, and is the color commentator for the world’s first giant robot fight held in Japan. One of the creative projects she is most proud of is envisioning, and leading a team of engineers and artists to
+                  create, a robotic dress that hugs people. Saura is leading efforts to broaden participation in Data Science by designing creative ways to engage a diverse population.
+
+                </span>
+                <button onclick="readMoreAndLess('more10', 'myBtn10', 'dots10')" class="speaker_btn" id="myBtn10">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="packages" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-dark-gray"><b>Prizes.</b></h1>
+      <hr style="width:50px;border:5px solid #E99995 " class="w3-round">
+      <p>Prizes coming soon...</p>
+    </div>
+    <!-- End page content -->
+  </div>
+
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+
+    <p class="w3-right">Made by HEARTS, with <a href="https://w3schools.com" target="_blank">W3.</a> 2020. <a href="assets/privacy.pdf" target="_blank">Privacy Policy</a></p>
+
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+    function hide(elem, img) {
+      var x = document.getElementById(elem);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        document.getElementById("event_image").src = img;
+      } else {
+        x.style.display = "none";
+        document.getElementById("event_image").src = "events/main.PNG";
+      }
+      x.style.width = "100%";
+    }
+
+    function hideboth(text, img) {
+      var x = document.getElementById(text);
+      var y = document.getElementById(img);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+
+      if (y.style.display === "none") {
+        y.style.display = "block";
+      } else {
+        y.style.display = "none";
+      }
+    }
+
+    function readMoreAndLess(e, buttonText, dots) {
+      var dots = document.getElementById(dots);
+      var moreText = document.getElementById(e);
+      var btnText = document.getElementById(buttonText);
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
+    }
+
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn1");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

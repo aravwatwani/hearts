@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <!--icons-->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Helping Everyone VIA Arts</title>
+  <style>
+
+    .top, .info-text {
+
+    text-align: center;
+    color: #5A4D9B;
+    padding: 30px;
+
+  }
+
+  .passage-text {
+
+    text-align: left;
+    color: black;
+    padding: 50px;
+
+    }
+
+  .projects-background {
+
+  background-color: #f8f9fa;
+
+  }
+
+  .info-text {
+
+  color: #d81b60;
+  padding-top: 2em;
+
+  }
+
+  .project-1 {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, 500%);
+  color: white;
+
+  }
+
+  h2, p {
+    -webkit-animation: fadein 5s;
+  }
+
+  .projects-background {
+
+    background-color: #F8F9FA;
+
+  }
+
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    border: none;
+    background: none;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .card-body, .card {
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    padding: 0px;
+    transition: 0s;
+
+    }
+
+      .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      top: 150%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent black transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+      .workshop-text{
+      /* padding: 55px;*/
+      padding-left: 80px;
+      padding-right: 80px;
+      padding-top: 70px;
+      padding-bottom: 70px;
+      margin: auto;
+      width: 50%;
+      text-align: center;
+      }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #ff4081;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #ff4011;
+  }
+
+  /* Add a background color and some padding around the form */
+  .container1 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top sticky-navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="ion-grid icon-sm"></span>
+    </button>
+    <a class="navbar-brand hero-heading" href="#">HEARTS</a>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#main">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#features">WHAT WE DO</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item mr-3">
+          <a class="nav-link page-scroll" href="#team">TEAM</a>
+        </li>
+        <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="#contact">CONTACT</button>
+          <div class="dropdown-content">
+            <a href="contact.html">Reach out!</a>
+          </div>
+        </li>
+        <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="events.html">EVENTS</button>
+            <div class="dropdown-content">
+              <a href="events.html">Home</a>
+              <a href="library.html">Workshops</a>
+              <a href="conference.html">Conference</a>
+            </div>
+        </li>
+        <!-- <li class="nav-item mr-3">
+          <button class="nav-link page-scroll dropdown" href="projects.html">PROJECTS</a>
+            <div class="dropdown-content">
+              <a href="ashram.html">The Sawan Dharmath Ashram Project</a>
+            </div>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- projects front page thing-->
+  <section class="bg-texture hero" id="projects">
+    <div class="container">
+      <div class="row d-md-flex brand">
+        <div class="col-md-6 hidden-sm-down wow fadeIn">
+          <img class="img-logo mx-auto d-block" src="img/logo.png" />
+        </div>
+        <div class="col-md-6 col-sm-12 text-white wow fadeIn">
+          <h2 class="pt-4">CONTACT US!<b class="text-primary-light"> </b></h2>
+          <p class="mt-5">
+            Reach out to us!
+          </p>
+          <p class="mt-5">
+            <a href="#features" class="btn btn-primary mr-2 mb-2 page-scroll">coming soon</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container1">
+    <form action="mailto:aravwatwani@gmail.com">
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+  <!--footer-->
+  <section class="bg-footer" id="connect">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
+          <h1>HEARTS</h1>
+          <p class="mt-4">
+            <a href="https://www.facebook.com/hearts.unity/" target="_blank"><em class="ion-social-facebook text-facebook-alt icon-sm mr-3"></em></a>
+            <a href="https://www.instagram.com/hearts_unity/" target="_blank"><em class="ion-social-instagram text-google-alt icon-sm mr-3"></em></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    $('a.page-scroll').bind('click', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+      }, 1500, 'easeInOutExpo');
+      event.preventDefault();
+    });
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
