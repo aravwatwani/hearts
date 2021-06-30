@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--STICKER FUNDRAISER-->
 
 <head>
   <meta charset="UTF-8">
@@ -172,39 +173,6 @@
 
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-  input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #ff4081;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #ff4011;
-  }
-
-  /* Add a background color and some padding around the form */
-  .container1 {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-
   </style>
 </head>
 
@@ -217,31 +185,28 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mr-3">
-          <a class="nav-link page-scroll" href="#main">HOME <span class="sr-only">(current)</span></a>
+          <a class="nav-link page-scroll" href="index.html#main">HOME <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item mr-3">
-          <a class="nav-link page-scroll" href="#features">WHAT WE DO</a>
+          <a class="nav-link page-scroll" href="index.html#features">WHAT WE DO</a>
         </li>
         <li class="nav-item mr-3">
-          <a class="nav-link page-scroll" href="#about">ABOUT</a>
+          <a class="nav-link page-scroll" href="index.html#about">ABOUT</a>
         </li>
         <li class="nav-item mr-3">
-          <a class="nav-link page-scroll" href="#team">TEAM</a>
+          <a class="nav-link page-scroll" href="index.html#team">TEAM</a>
         </li>
         <li class="nav-item mr-3">
-          <button class="nav-link page-scroll dropdown" href="#contact">CONTACT</button>
-          <div class="dropdown-content">
-            <a href="contact.html">Reach out!</a>
-          </div>
+          <a class="nav-link page-scroll dropdown" href="index.html#contact">CONTACT</a>
         </li>
         <li class="nav-item mr-3">
-          <button class="nav-link page-scroll dropdown" href="events.html">EVENTS</button>
+          <button class="nav-link page-scroll dropdown" href="events.html">EVENTS
             <div class="dropdown-content">
               <a href="events.html">Home</a>
               <a href="library.html">Workshops</a>
               <a href="conference.html">Conference</a>
-              <a href="sticker.html">Sticker Fundraiser</a>
             </div>
+          </button>
         </li>
         <!-- <li class="nav-item mr-3">
           <button class="nav-link page-scroll dropdown" href="projects.html">PROJECTS</a>
@@ -261,48 +226,44 @@
           <img class="img-logo mx-auto d-block" src="img/logo.png" />
         </div>
         <div class="col-md-6 col-sm-12 text-white wow fadeIn">
-          <h2 class="pt-4">CONTACT US!<b class="text-primary-light"> </b></h2>
+          <h2 class="pt-4">STICKER FUNDRAISER<b class="text-primary-light"> </b></h2>
           <p class="mt-5">
-            Reach out to us!
+            We are hosting a sticker fundraiser by selling stickers to fundraise for important causes.
           </p>
           <p class="mt-5">
-            <a href="#features" class="btn btn-primary mr-2 mb-2 page-scroll">coming soon</a>
+            <a href="#features" class="btn btn-primary mr-2 mb-2 page-scroll">explore</a>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="container1">
-    <form action="mailto:aravwatwani@gmail.com">
+  <section class="projects-background" id="features">
+    <div class="row">
 
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <div class="column">
+        <img class="img-fluid" src="img/stickerdesign.JPG" alt="Gallery">
+      </div>
+      <div class="column">
+        <p class="lead pt-4"> Please donate or purchase our stickers for only <b> $2 each! </b>  </p>
 
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <p class="lead pt-4"> Our stickers are based on the design to the left! Includes free shipping + cute,
+            handmade cards! </p>
 
-      <label for="country">Country</label>
-      <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-      </select>
+            <p class="lead pt-5"> 100% of the proceeds will go to  <a href=https://berkeley.ashanet.org> <u> Asha for Education, Berkeley </u> </a>, a nonprofit
+              organization dedicated to catalyzing
+              socio-economic change in India
+              through the use of education.  </p>
+          
+          <p class="lead pt-4"> If you are interested please fill out this form! </p>
 
-      <label for="subject">Subject</label>
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-      <input type="submit" value="Submit">
-
-    </form>
-  </div>
-
-
-
-
-
-
-
+          <p class="lead pt-5"> <u> <a href=https://docs.google.com/forms/d/e/1FAIpQLSdyf_NfhK_cWygE8_JNkEyAnYsrW02wB1Lqhc4OxeH8W3skNQ/viewform>FORM TO BUY STICKERS!</a> </u> </p>
+      </div>
+      <div class="column">
+        <img src="img/stickerFlyer.jpg" style="width:100%">
+      </div>
+    </div>
+  </section>
   <!--footer-->
   <section class="bg-footer" id="connect">
     <div class="container">
@@ -317,6 +278,7 @@
       </div>
     </div>
   </section>
+  
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
